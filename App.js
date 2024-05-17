@@ -8,7 +8,7 @@ import { useFonts } from 'expo-font';
 import { s } from './App.style';
 import { Header } from './components/Header/Header';
 import { Pokedex } from './Pages/Pokedex/Pokedex';
-import { PokeInfo } from './Pages/PokeInfo/PokeInfo';
+// import { PokeInfo } from './Pages/PokeInfo/PokeInfo';
 import { Trainer } from './Pages/Trainer/Trainer';
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
 						<Stack.Navigator screenOptions={{ animation: 'fade', headerShown: false }} initialRouteName="Home">
 							<Stack.Screen name="Home" component={Home} />
 							<Stack.Screen name="Pokedex" component={Pokedex} />
-							<Stack.Screen name="PokeInfo" component={PokeInfo} />
+							{/* <Stack.Screen name="PokeInfo" component={PokeInfo} /> */}
 							<Stack.Screen name="Trainer" component={Trainer} />
 						</Stack.Navigator>
 					</NavigationContainer>
