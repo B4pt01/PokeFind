@@ -1,8 +1,8 @@
 import { View, TouchableOpacity } from 'react-native';
-import { Txt } from '../../components/Txt/Txt';
+import searchicon from '../../assets/icon/iconSearch.png';
 import { HomeText } from '../../components/HomeText/HomeText';
 import { s } from './Home.style';
-import { SearchIcon } from '../../components/SearchIcon/SearchIcon';
+import { SearchIcon } from '../../components/Icon/Icon';
 import { ButtonChoice } from '../../components/ButtonChoice/ButtonChoice';
 import pokeButton from '../../assets/Backgrounds/PokemonButtonBackground.png';
 import trainerButton from '../../assets/Backgrounds/TrainerButtonBackground.png';
@@ -20,7 +20,7 @@ export function Home({}) {
 		<>
 			<View style={s.container}>
 				<HomeText />
-				<SearchIcon />
+				<Icon icon={searchicon} />
 			</View>
 			<View>
 				<TouchableOpacity onPress={goToPokedex}>
