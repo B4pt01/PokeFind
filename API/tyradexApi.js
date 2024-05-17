@@ -9,9 +9,21 @@ export class TyradexApi {
 			}
 			const data = await response.json();
 			const {
-				Pokeinfo: { pokedex_id, generation, category, name, sprites, types, stats, evolution, height, weight }
+				Pokeinfo: { name, generation, category, sprites, types, stats, evolution, height, weight }
 			} = data;
-			return { pokedex_id, generation, category, name, sprites, types, stats, evolution, height, weight };
+			console.log(data);
+			return {
+				name: name,
+				pokedex_id: pokedex_id,
+				generation: generation,
+				category: category,
+				sprites: sprites,
+				types: types,
+				stats: stats,
+				evolution: evolution,
+				height: height,
+				weight: weight
+			};
 		} catch (e) {
 			Alert.alert("Une erreur s'est produite !", e.message);
 		}

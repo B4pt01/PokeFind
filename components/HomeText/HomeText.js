@@ -4,7 +4,7 @@ import { Txt } from '../Txt/Txt';
 export function HomeText({}) {
 	return (
 		<View>
-			<Txt>choose your type of search</Txt>
+			<Txt style={{ fontSize: 25 }}>choose your type of search</Txt>
 		</View>
 	);
 }

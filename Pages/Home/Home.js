@@ -2,7 +2,7 @@ import { View, TouchableOpacity } from 'react-native';
 import searchicon from '../../assets/icon/iconSearch.png';
 import { HomeText } from '../../components/HomeText/HomeText';
 import { s } from './Home.style';
-import { SearchIcon } from '../../components/Icon/Icon';
+import { Icon } from '../../components/Icon/Icon';
 import { ButtonChoice } from '../../components/ButtonChoice/ButtonChoice';
 import pokeButton from '../../assets/Backgrounds/PokemonButtonBackground.png';
 import trainerButton from '../../assets/Backgrounds/TrainerButtonBackground.png';
@@ -22,7 +22,7 @@ export function Home({}) {
 				<HomeText />
 				<Icon icon={searchicon} />
 			</View>
-			<View>
+			<View style={s.button}>
 				<TouchableOpacity onPress={goToPokedex}>
 					<ButtonChoice page="Pokemon" backgroundButton={pokeButton} />
 				</TouchableOpacity>
