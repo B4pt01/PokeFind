@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { Home } from './Pages/Home/Home';
+import JuliusSansOneRegular from './assets/font/JuliusSansOne-Regular.ttf';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { useFonts } from 'expo-font';
+import { s } from './App.style';
+import { Header } from './components/Header/Header';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	const [isFontLoaded] = useFonts({
+		'JuliusSansOne-Regular': JuliusSansOneRegular
+	});
+	return isFontLoaded ? (
+		<TouchableWithoutFeedback
+			onPress={() => {
+				Keyboard.dismiss();
+			}}
+		>
+			<SafeAreaProvider>
+				<SafeAreaView style={s.container}>
+					<Header style={s.header} />
+					<Home />
+				</SafeAreaView>
+			</SafeAreaProvider>
+		</TouchableWithoutFeedback>
+	) : null;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

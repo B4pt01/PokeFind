@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 export const s = StyleSheet.create({
-	Logo: {
-		width: 50,
-		height: 50
+	text: {
+		color: 'black',
+		fontFamily: 'JuliusSansOne-Regular',
+		fontSize: 20
 	}
 });
