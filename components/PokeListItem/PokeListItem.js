@@ -19,8 +19,8 @@ export function PokeListItem({ image, name, types, height, weight }) {
 				)}
 			</View>
 			{image ? <Image source={{ uri: image }} style={s.image} /> : <Txt>Image not available</Txt>}
-			<Txt>Height: {height ? `${height} m` : 'Unknown'}</Txt>
-			<Txt>Weight: {weight ? `${weight} kg` : 'Unknown'}</Txt>
+			<Txt>Height: {height ? `${height} ` : 'Unknown'}</Txt>
+			<Txt>Weight: {weight ? `${weight} ` : 'Unknown'}</Txt>
 		</View>
 	);
 }
